@@ -25,8 +25,8 @@ import matplotlib.pyplot as plt  # plotting
 #  subdirectory "data" within the current directory
 # TODO: change filenames
 filepath_ceramic = "data/###########.xls"
-filepath_graphite = "data//###########.xls"
-filepath_steel = "data//###########.xls"
+filepath_graphite = "data/###########.xls"
+filepath_steel = "data/###########.xls"
 
 # CREATE VARIABLES FOR FREQUENCY OF MEASUREMENTS
 # TODO: change values
