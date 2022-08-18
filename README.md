@@ -2,8 +2,10 @@
 
 ## Setup
 
-- clone
-- pip install
+- install python version >=3.8
+- install git from https://git-scm.com/downloads
+- fork this repository
+- run git clone
 
 ## How to run the scripts
 
