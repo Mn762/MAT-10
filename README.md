@@ -6,6 +6,9 @@
 - install git from https://git-scm.com/downloads
 - fork this repository
 - run git clone
+- run `python -m venv .venv`
+- run `source .venv/bin/activate`
+- run `pip install -r requirements.txt`
 
 ## How to run the scripts
 
