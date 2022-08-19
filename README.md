@@ -2,28 +2,17 @@
 
 ## Setup
 
-- install python version >=3.8
-- install git from https://git-scm.com/downloads
-- fork this repository
-- run git clone
-- run `python -m venv .venv`
-- run `source .venv/bin/activate`
-- run `pip install -r requirements.txt`
+See Game Lab README for Setup instructions.
 
-## How to run the scripts
-
-Run the script from inside the experiment's folder
-
-
-- `cd exp1-casting/`
-- `python exp1-casting.py`
+This code requires at least Python version 3.8.
 
 
 ## Structure of MAT 10 project
 
-
-- mat10/
-	+ exp1-casting/
+- MAT-10/
+	+ experiment/
 		* script.py
 		* data/
+			- data.csv
 		* plots/
+			- figure1.png
