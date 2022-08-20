@@ -19,9 +19,9 @@
 	1. Create the virtual enviroment: `python3 -m venv mat10_venv`
 	2. Activate it: 
 		+ MAC: `source mat10_venv/bin/activate`
-			* video (Python Tutorial VENV - Mac)[https://youtu.be/Kg1Yvry_Ydk?t=82]
+			* video [Python Tutorial VENV - Mac](https://youtu.be/Kg1Yvry_Ydk?t=82)
 		+ Windows: `mat10_venv\Scripts\activate.bat`
-			* video (Python Tutorial VENV - Windows)[https://youtu.be/APOPm01BVrk?t=115]
+			* video [Python Tutorial VENV - Windows](https://youtu.be/APOPm01BVrk?t=115)
 	3. Install all packages in requirements.txt `pip install -r requirements.txt`
 
 3. Install an IDE (Interactive Development Environment)
