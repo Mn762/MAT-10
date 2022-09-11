@@ -1,8 +1,8 @@
 """
 Experiment 1: Casting Lab
 Course: MAT 010
-Date:
-Name:
+Date: 9/8/22
+Name: Michael Nigohosian
 
 Effects of casting temperature and mold material on 
 cooling rate and grain structure of 99.99% aluminium.
@@ -24,15 +24,15 @@ import matplotlib.pyplot as plt  # plotting
 #  "data/fname.xls" implies the fname.xls file is in a
 #  subdirectory "data" within the current directory
 # TODO: change filenames
-filepath_ceramic = "data/###########.xls"
-filepath_graphite = "data/###########.xls"
-filepath_steel = "data/###########.xls"
+filepath_ceramic = "exp1-casting/data/High_temp_ceramic.xls"
+filepath_graphite = "exp1-casting/data/High_temp_graphite.xls"
+filepath_steel = "exp1-casting/data/High_temp_steel.xls"
 
 # CREATE VARIABLES FOR FREQUENCY OF MEASUREMENTS
 # TODO: change values
 freq_ceramic = 1 # Hz
-freq_graphite = 1 # Hz
-freq_steel = 1 # Hz
+freq_graphite = 5 # Hz
+freq_steel = 5 # Hz
 
 # CREATE VARIABLES FOR LINEAR FIT RANGE
 # TODO: change values
@@ -42,8 +42,8 @@ range_steel = [25, -1]
 
 # COLUMNS
 # TODO: add axis titles
-x_axis = "x axis title"
-y_axis = "y axis title"
+x_axis = "Time"
+y_axis = "Temperature"
 
 
 def load_data(filepath, x, y, freq=1, header_line=0, view_data=False):
@@ -81,12 +81,11 @@ def load_data(filepath, x, y, freq=1, header_line=0, view_data=False):
 
     return df_loaded
 
-
 # CALL FUNCTION AND SAVE DATAFRAMES TO VARIABLES
 # TODO: add view_data=True to each of the function calls 
-df_ceramic = load_data(filepath_ceramic, x=x_axis, y=y_axis, freq=freq_ceramic, header_line=0, view_data=True)  # TODO: add parameters as needed 
-df_graphite = load_data(filepath_graphite, x=x_axis, y=y_axis, freq=freq_graphite, header_line=0)  # TODO: add parameters as needed 
-df_steel = load_data(filepath_steel, x=x_axis, y=y_axis, freq=freq_steel, header_line=0)  # TODO: add parameters as needed 
+df_ceramic = load_data(filepath_ceramic, x=x_axis, y=y_axis, freq=freq_ceramic, header_line=2, view_data=True)  # TODO: add parameters as needed 
+df_graphite = load_data(filepath_graphite, x=x_axis, y=y_axis, freq=freq_graphite, header_line=2, view_data=True)  # TODO: add parameters as needed 
+df_steel = load_data(filepath_steel, x=x_axis, y=y_axis, freq=freq_steel, header_line=2, view_data=True)  # TODO: add parameters as needed 
 
 # -----------------------------------------------
 
@@ -189,9 +188,9 @@ fig3 = plot_data(df_steel, x=x_axis, y=y_axis, r=range_steel)
  
 # TODO: customize saved image
 # SAVE PLOTS TO filename.png in the plots/ folder
-fig1.savefig("plots/figure1.png", dpi=150, bbox_inches="tight")
-fig2.savefig("plots/figure2.png", dpi=150, bbox_inches="tight")
-fig3.savefig("plots/figure3.png", dpi=150, bbox_inches="tight")
+fig1.savefig("exp1-casting/plots/ceramic.png", dpi=150, bbox_inches="tight")
+fig2.savefig("exp1-casting/plots/graphite.png", dpi=150, bbox_inches="tight")
+fig3.savefig("exp1-casting/plots/steel.png", dpi=150, bbox_inches="tight")
 
 # SHOW PLOTS in their own windows
 #  plt.show() must be called after fig.savefig() 
