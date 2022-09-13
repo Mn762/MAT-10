@@ -36,14 +36,14 @@ freq_steel = 5 # Hz
 
 # CREATE VARIABLES FOR LINEAR FIT RANGE
 # TODO: change values
-range_ceramic = [25, -1]
-range_graphite = [25, -1]
-range_steel = [25, -1]
+range_ceramic = [15, 50]
+range_graphite = [10, 16]
+range_steel = [10, 16]
 
 # COLUMNS
 # TODO: add axis titles
 x_axis = "Time"
-y_axis = "Temperature"
+y_axis = "Temperature (C)"
 
 
 def load_data(filepath, x, y, freq=1, header_line=0, view_data=False):
