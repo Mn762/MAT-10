@@ -37,12 +37,12 @@ freq_steel = 5 # Hz
 # CREATE VARIABLES FOR LINEAR FIT RANGE
 # TODO: change values
 range_ceramic = [15, 50]
-range_graphite = [10, 16]
-range_steel = [10, 16]
+range_graphite = [11, 17]
+range_steel = [26, 34]
 
 # COLUMNS
 # TODO: add axis titles
-x_axis = "Time"
+x_axis = "Time (s)"
 y_axis = "Temperature (C)"
 
 
