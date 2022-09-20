@@ -1,8 +1,8 @@
 """
 Experiment 2: Heat Treat Lab
 Course: MAT 010
-Date:
-Name:
+Date: 9/20/22
+Name: Michael Nigohosian
 
 Effect of cooling media in heat treatment of 
 AISI 1020, 1040, and 1080 steels on cooling rate 
@@ -23,15 +23,15 @@ import matplotlib.pyplot as plt  # plotting
 
 #  CREATE VARIABLES FOR FILEPATHS
 #  TODO: change filenames
-filepath_air = "data/############"
-filepath_oil = "data/############"
-filepath_h2o = "data/############"
+filepath_air = "exp2-heat-treat/data/1040AC_CS.csv"
+filepath_oil = "exp2-heat-treat/data/1040OQ_CS.csv"
+filepath_h2o = "exp2-heat-treat/data/1040WQ_CS.csv"
 
 
 # COLUMNS
 # TODO: add axis title
-x_axis = "x axis title"
-y_axis = "y axis title"
+x_axis = "Time (s)"
+y_axis = "Temperature (C)"
 
 
 # DICTIONARIES
@@ -41,7 +41,7 @@ info_data = {
     'x': x_axis,
     'y': y_axis,
     'col_names': [y_axis],
-    'header_line': 0 # TODO: update value
+    'header_line': 2 # TODO: update value
 }
 
 #  Create dictionary with sample specific values
@@ -90,8 +90,8 @@ def load_data(filepath, info_data={}, freq=1, view_data=False):
 
 # CALL FUNCTION AND SAVE DATAFRAMES TO VARIABLES
 df_air = load_data(filepath_air, info_data=info_data, freq=info_air['freq'], view_data=True)
-df_oil = load_data(filepath_oil, info_data=info_data, freq=info_oil['freq'])
-df_h2o = load_data(filepath_h2o, info_data=info_data, freq=info_h2o['freq'])
+df_oil = load_data(filepath_oil, info_data=info_data, freq=info_oil['freq'], view_data=True)
+df_h2o = load_data(filepath_h2o, info_data=info_data, freq=info_h2o['freq'], view_data=True)
 
 # -----------------------------------------------
 
@@ -200,9 +200,9 @@ fig3 = plot_data(df_h2o, x=x_axis, y=y_axis, info=info_h2o, info_scatter=info_sc
 
 # TODO: customize saved image
 # SAVE PLOTS TO filename.png in the plots/ folder
-fig1.savefig("plots/figure1.png", dpi=150, bbox_inches="tight")
-fig2.savefig("plots/figure2.png", dpi=150, bbox_inches="tight")
-fig3.savefig("plots/figure3.png", dpi=150, bbox_inches="tight")
+fig1.savefig("exp2-heat-treat/plots/figure1.png", dpi=150, bbox_inches="tight")
+fig2.savefig("exp2-heat-treat/plots/figure2.png", dpi=150, bbox_inches="tight")
+fig3.savefig("exp2-heat-treat/plots/figure3.png", dpi=150, bbox_inches="tight")
 
 # SHOW PLOTS in their own windows
 #  plt.show() must be called after fig.savefig() 
