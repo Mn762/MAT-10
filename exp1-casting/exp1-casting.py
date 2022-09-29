@@ -24,9 +24,9 @@ import matplotlib.pyplot as plt  # plotting
 #  "data/fname.xls" implies the fname.xls file is in a
 #  subdirectory "data" within the current directory
 # TODO: change filenames
-filepath_ceramic = "exp1-casting/data/High_temp_ceramic.xls"
-filepath_graphite = "exp1-casting/data/High_temp_graphite.xls"
-filepath_steel = "exp1-casting/data/High_temp_steel.xls"
+filepath_ceramic = "exp1-casting/data/high_temp_ceramic.xls"
+filepath_graphite = "exp1-casting/data/high_temp_graphite.xls"
+filepath_steel = "exp1-casting/data/high_temp_steel.xls"
 
 # CREATE VARIABLES FOR FREQUENCY OF MEASUREMENTS
 # TODO: change values
@@ -36,8 +36,8 @@ freq_steel = 5 # Hz
 
 # CREATE VARIABLES FOR LINEAR FIT RANGE
 # TODO: change values
-range_ceramic = [15, 50]
-range_graphite = [11, 17]
+range_ceramic = [10, 20]
+range_graphite = [12, 17]
 range_steel = [26, 34]
 
 # COLUMNS
