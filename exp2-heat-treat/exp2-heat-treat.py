@@ -23,9 +23,9 @@ import matplotlib.pyplot as plt  # plotting
 
 #  CREATE VARIABLES FOR FILEPATHS
 #  TODO: change filenames
-filepath_air = "/data/1040AC_CS.csv"
-filepath_oil = "/data/1040OQ_CS.csv"
-filepath_h2o = "/data/1040WQ_CS.csv"
+filepath_air = "exp2-heat-treat/data/1040AC_CS.csv"
+filepath_oil = "exp2-heat-treat/data/1040OQ_CS.csv"
+filepath_h2o = "exp2-heat-treat/data/1040WQ_CS.csv"
 
 
 # COLUMNS
