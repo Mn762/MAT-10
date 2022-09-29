@@ -1,7 +1,7 @@
 """
 Experiment 2: Heat Treat Lab
 Course: MAT 010
-Date: 9/20/22
+Date: 9/29/22
 Name: Michael Nigohosian
 
 Effect of cooling media in heat treatment of 
@@ -23,9 +23,9 @@ import matplotlib.pyplot as plt  # plotting
 
 #  CREATE VARIABLES FOR FILEPATHS
 #  TODO: change filenames
-filepath_air = "exp2-heat-treat/data/1040AC_CS.csv"
-filepath_oil = "exp2-heat-treat/data/1040OQ_CS.csv"
-filepath_h2o = "exp2-heat-treat/data/1040WQ_CS.csv"
+filepath_air = "/data/1040AC_CS.csv"
+filepath_oil = "/data/1040OQ_CS.csv"
+filepath_h2o = "/data/1040WQ_CS.csv"
 
 
 # COLUMNS
@@ -41,7 +41,7 @@ info_data = {
     'x': x_axis,
     'y': y_axis,
     'col_names': [y_axis],
-    'header_line': 2 # TODO: update value
+    'header_line': 5 # value of the header's row number
 }
 
 #  Create dictionary with sample specific values
@@ -161,9 +161,8 @@ def plot_data(df, x, y, info={}, info_scatter={}):
     r = info.get('r', [0,-1])
     x_slice, y_slice = get_slice(df, r, y)
 
-    # GET LINEAR FIT OF SLICE
-    a, b, r2, txt_annotation = get_linear_fit(x_slice, y_slice)
-
+    # GET LINEAR FIT OF
+    a, b, r2, txt_annotation = get_linear_fit(x_slice, y_slice.astype(np.float32))
 
     # PLOT THE DATA
     plt.scatter(df.index, df[y], **info_scatter)
@@ -200,9 +199,9 @@ fig3 = plot_data(df_h2o, x=x_axis, y=y_axis, info=info_h2o, info_scatter=info_sc
 
 # TODO: customize saved image
 # SAVE PLOTS TO filename.png in the plots/ folder
-fig1.savefig("exp2-heat-treat/plots/figure1.png", dpi=150, bbox_inches="tight")
-fig2.savefig("exp2-heat-treat/plots/figure2.png", dpi=150, bbox_inches="tight")
-fig3.savefig("exp2-heat-treat/plots/figure3.png", dpi=150, bbox_inches="tight")
+fig1.savefig("plots/figure1.png", dpi=150, bbox_inches="tight")
+fig2.savefig("plots/figure2.png", dpi=150, bbox_inches="tight")
+fig3.savefig("plots/figure3.png", dpi=150, bbox_inches="tight")
 
 # SHOW PLOTS in their own windows
 #  plt.show() must be called after fig.savefig() 
