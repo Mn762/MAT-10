@@ -23,9 +23,9 @@ import matplotlib.pyplot as plt  # plotting
 
 #  CREATE VARIABLES FOR FILEPATHS
 #  TODO: change filenames
-filepath_air = "exp2-heat-treat/data/1040AC_CS.csv"
-filepath_oil = "exp2-heat-treat/data/1040OQ_CS.csv"
-filepath_h2o = "exp2-heat-treat/data/1040WQ_CS.csv"
+filepath_air = "data/1040ACCS.csv"
+filepath_oil = "data/1040OQ_CS.csv"
+filepath_h2o = "data/1040WQ_CS.csv"
 
 
 # COLUMNS
@@ -53,12 +53,12 @@ info_air = {
 }
 
 info_oil = {
-    'freq': 1,  # Hz, TODO: update value
+    'freq': 5,  # Hz, TODO: update value
     'r': [0, -1]  # TODO: update range
 }
 
 info_h2o = {
-    'freq': 1,  # Hz, TODO: update value
+    'freq': 5,  # Hz, TODO: update value
     'r': [0, -1]  # TODO: update range
 }
 
